@@ -1,0 +1,45 @@
+:root {
+  --ground: #f6f3ee;
+  --surface: #ffffff;
+  --ink: #221c14;
+  --muted: #6b6255;
+  --gold: #9a6b1f;
+  --rule: #e2d9c9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #110d17;
+    --surface: #1a1422;
+    --ink: #eee6d8;
+    --muted: #a99f8f;
+    --gold: #d8a54b;
+    --rule: #33293f;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 16px/1.65 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+}
+header {
+  border-bottom: 1px solid var(--rule);
+  background: var(--surface);
+}
+header .wrap { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
+.brand { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+nav { display: flex; gap: 16px; flex-wrap: wrap; }
+nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+nav a:hover, nav a:focus-visible { color: var(--gold); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
+main { padding: 32px 0 56px; }
+h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; text-wrap: balance; }
+h2 { font-size: 19px; margin: 32px 0 8px; color: var(--gold); }
+.lede { color: var(--muted); margin: 0 0 24px; }
+.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 18px 20px; margin: 16px 0; }
+ul { padding-left: 20px; }
+li { margin: 4px 0; }
+a { color: var(--gold); }
+footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; padding: 20px 0 32px; }
+code { background: var(--rule); padding: 1px 5px; border-radius: 4px; font-size: 14px; }

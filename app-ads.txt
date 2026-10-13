@@ -1,0 +1,2 @@
+# app-ads.txt da IronTyro — completar com a linha do AdMob quando a conta existir:
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
