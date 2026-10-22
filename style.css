@@ -42,4 +42,20 @@ ul { padding-left: 20px; }
 li { margin: 4px 0; }
 a { color: var(--gold); }
 footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; padding: 20px 0 32px; }
+/* destaque do jogo na página inicial (arte do jogo: sempre escuro) */
+.feature {
+  position: relative; display: block; overflow: hidden; margin: 16px 0 8px;
+  border-radius: 12px; border: 1px solid #d8a54b66; background: #0b0812;
+  color: #f3ead4; text-decoration: none; min-height: 300px;
+}
+.feature-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: .55; transition: transform .4s ease; }
+.feature:hover .feature-art, .feature:focus-visible .feature-art { transform: scale(1.04); }
+.feature-body {
+  position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  padding: 22px; min-height: 300px; justify-content: flex-end;
+  background: linear-gradient(#0b081200 10%, #0b0812ee 85%);
+}
+.feature-logo { width: 150px; height: auto; filter: drop-shadow(0 6px 16px #000c); }
+.feature-text { max-width: 52ch; font-size: 15px; line-height: 1.55; }
+.feature-cta { font-weight: 700; color: #f3d27a; letter-spacing: .02em; }
 code { background: var(--rule); padding: 1px 5px; border-radius: 4px; font-size: 14px; }

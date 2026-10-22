@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elemental Knights</title>
+<meta name="description" content="Elemental Knights — RPG estratégico para Android. Escolha sua Classe, domine os seis Elementos e monte sua estratégia de habilidades. Um jogo da IronTyro.">
+<meta property="og:title" content="Elemental Knights">
+<meta property="og:description" content="Escolha sua Classe, domine os seis Elementos e monte sua estratégia. Um jogo da IronTyro.">
+<meta property="og:image" content="https://irontyro.github.io/elemental-knights/img/keyart.webp">
+<meta name="theme-color" content="#0b0812">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="ek.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="studio" href="../">IronTyro</a>
+    <nav aria-label="Seções">
+      <a href="#classes">Classes</a>
+      <a href="#elementos">Elementos</a>
+      <a href="#modos">Modos</a>
+      <a href="#forja">Forja</a>
+      <a href="#gameplay">Gameplay</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-label="Elemental Knights">
+  <div class="hero-art" role="img" aria-label="Os quatro heróis diante dos reinos elementais"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-in">
+    <img class="logo" src="img/logo.webp" width="640" height="629" alt="Elemental Knights">
+    <p class="tagline">Escolha sua Classe. Domine os seis Elementos.<br>Monte a estratégia que vence cada batalha.</p>
+    <div class="cta-row">
+      <a class="cta" href="#gameplay">Ver o jogo em ação</a>
+      <span class="soon">Em breve para Android</span>
+    </div>
+  </div>
+</section>
+
+<main>
+
+  <section id="classes" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Escolha seu herói</p>
+      <h2>Quatro Classes</h2>
+      <p class="intro">A Classe é escolhida uma vez e define quem você é em batalha. Cada uma tem seus pontos fortes e um ponto fraco que pede estratégia.</p>
+      <div class="classes">
+        <article class="hero-card" style="--c:#7aa6d8">
+          <div class="hero-pic"><img src="img/heroi_guerreiro.webp" alt="Cavaleiro" loading="lazy"></div>
+          <h3>Cavaleiro</h3>
+          <p class="role">Sobrevivência</p>
+          <p>Maior Vida e Defesa do jogo; sacrifica mobilidade para cumprir o papel de linha de frente.</p>
+        </article>
+        <article class="hero-card" style="--c:#6fb26a">
+          <div class="hero-pic"><img src="img/heroi_arqueiro.webp" alt="Arqueiro" loading="lazy"></div>
+          <h3>Arqueiro</h3>
+          <p class="role">Iniciativa e precisão</p>
+          <p>Classe mais veloz do jogo, com a maior Precisão; baixa Defesa exige posicionamento e estratégia.</p>
+        </article>
+        <article class="hero-card" style="--c:#a777e0">
+          <div class="hero-pic"><img src="img/heroi_mago.webp" alt="Maga" loading="lazy"></div>
+          <h3>Maga</h3>
+          <p class="role">Dano bruto</p>
+          <p>Maior potencial ofensivo entre todas as Classes; Vida acima da média compensa a Defesa limitada.</p>
+        </article>
+        <article class="hero-card" style="--c:#e0694a">
+          <div class="hero-pic"><img src="img/heroi_rogue.webp" alt="Ladra" loading="lazy"></div>
+          <h3>Ladra</h3>
+          <p class="role">Evasão</p>
+          <p>A Classe mais difícil de atingir, com velocidade e esquiva; baixo Ataque e Defesa a tornam vulnerável quando acertada.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="elementos" class="band band-temple">
+    <div class="wrap">
+      <p class="eyebrow">A decisão de cada batalha</p>
+      <h2>Seis Elementos</h2>
+      <p class="intro">Antes de lutar, você escolhe o Elemento do herói. Cada um vence outro, e cada terreno favorece alguns deles. Olhar o inimigo e escolher bem é metade da vitória.</p>
+
+      <div class="elements">
+        <div class="ring" aria-hidden="true">
+          <svg class="ring-arrows" viewBox="0 0 400 400">
+            <circle cx="200" cy="200" r="150" />
+            <g class="chev">
+              <path d="M0 -7 L9 0 L0 7" transform="rotate(30 200 200) translate(200 50)"/>
+              <path d="M0 -7 L9 0 L0 7" transform="rotate(90 200 200) translate(200 50)"/>
+              <path d="M0 -7 L9 0 L0 7" transform="rotate(150 200 200) translate(200 50)"/>
+              <path d="M0 -7 L9 0 L0 7" transform="rotate(210 200 200) translate(200 50)"/>
+              <path d="M0 -7 L9 0 L0 7" transform="rotate(270 200 200) translate(200 50)"/>
+              <path d="M0 -7 L9 0 L0 7" transform="rotate(330 200 200) translate(200 50)"/>
+            </g>
+          </svg>
+          <img class="gem g0" src="img/gema_fogo.webp" alt="">
+          <img class="gem g1" src="img/gema_gelo.webp" alt="">
+          <img class="gem g2" src="img/gema_natureza.webp" alt="">
+          <img class="gem g3" src="img/gema_terra.webp" alt="">
+          <img class="gem g4" src="img/gema_raio.webp" alt="">
+          <img class="gem g5" src="img/gema_agua.webp" alt="">
+          <p class="ring-hint">cada um vence<br>o próximo</p>
+        </div>
+
+        <ul class="el-list">
+          <li style="--e:#ff6a3d"><img src="img/gema_fogo.webp" alt="" loading="lazy"><div><h3>Fogo <span>Queimadura</span></h3><p>Pressão ofensiva crescente.</p><p class="beats">Vence o <b>Gelo</b></p></div></li>
+          <li style="--e:#8fd9e8"><img src="img/gema_gelo.webp" alt="" loading="lazy"><div><h3>Gelo <span>Congelamento</span></h3><p>O mestre do controle do campo de batalha.</p><p class="beats">Vence a <b>Natureza</b></p></div></li>
+          <li style="--e:#6fbf55"><img src="img/gema_natureza.webp" alt="" loading="lazy"><div><h3>Natureza <span>Envenenamento</span></h3><p>Evolução constante, adaptação e persistência: vence por desgaste contínuo.</p><p class="beats">Vence a <b>Terra</b></p></div></li>
+          <li style="--e:#c08a4a"><img src="img/gema_terra.webp" alt="" loading="lazy"><div><h3>Terra <span>Abalo</span></h3><p>Uma fortaleza inabalável que controla a linha de frente e transforma resistência em vantagem.</p><p class="beats">Vence o <b>Raio</b></p></div></li>
+          <li style="--e:#f0c93d"><img src="img/gema_raio.webp" alt="" loading="lazy"><div><h3>Raio <span>Paralisia</span></h3><p>Velocidade, precisão e domínio do ritmo: ataca antes dos adversários.</p><p class="beats">Vence a <b>Água</b></p></div></li>
+          <li style="--e:#4aa3cf"><img src="img/gema_agua.webp" alt="" loading="lazy"><div><h3>Água <span>Lentidão</span></h3><p>O mestre das marés prolonga o combate até assumir o controle total.</p><p class="beats">Vence o <b>Fogo</b></p></div></li>
+        </ul>
+      </div>
+
+      <div class="strategy">
+        <h3>Sua estratégia elemental</h3>
+        <p>Para cada Elemento, escolha <b>2 Passivas</b> e <b>3 Ativas</b>, incluindo Ultimates. Em batalha, o combate corre em tempo real e você decide a hora de cada habilidade. Lutar com um Elemento também aumenta a sua <b>Mestria</b> nele.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="modos" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Para onde ir</p>
+      <h2>Modos de jogo</h2>
+      <div class="modes">
+        <article class="mode">
+          <img src="img/modo_historia.webp" alt="Modo História" loading="lazy">
+          <div class="mode-body">
+            <h3>Modo História</h3>
+            <p>Acompanhe a história de Elemental Knights, uma jornada depois da outra. Cada jornada é uma sequência de lutas, e concluir uma libera a próxima.</p>
+            <p class="gain">Prêmio especial na primeira vez que conclui cada jornada.</p>
+          </div>
+        </article>
+        <article class="mode">
+          <img src="img/modo_aleatoria.webp" alt="Jornada Aleatória" loading="lazy">
+          <div class="mode-body">
+            <h3>Jornada Aleatória</h3>
+            <p>Uma jornada diferente a cada vez: o jogo sorteia o terreno e monstros que são fortes nele. São 5 lutas seguidas, cada uma mais difícil, e a última é contra um Chefe.</p>
+            <p class="gain">Ótima para juntar materiais e Gemas de Elementos variados.</p>
+          </div>
+        </article>
+        <article class="mode">
+          <img src="img/modo_torre.webp" alt="Torre" loading="lazy">
+          <div class="mode-body">
+            <h3>Torre</h3>
+            <p>Suba andar por andar. Cada andar é uma única luta, difícil desde o começo. A cada 15 dias a Torre recomeça, com andares e prêmios novos.</p>
+            <p class="gain">Os andares mais altos dão os equipamentos mais raros.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="forja" class="band band-forge">
+    <div class="wrap forge">
+      <div class="forge-art" aria-label="Yelena, a ferreira, martelando na bigorna" role="img">
+        <div class="smith">
+          <img class="f f1" src="img/yelena_action1.webp" alt="">
+          <img class="f f2" src="img/yelena_action2.webp" alt="">
+          <img class="f f3" src="img/yelena_action3.webp" alt="">
+          <img class="f f4" src="img/yelena_action4.webp" alt="">
+        </div>
+        <div class="embers"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="forge-text">
+        <p class="eyebrow">Yelena, a ferreira</p>
+        <h2>Forje o seu arsenal</h2>
+        <ul class="feats">
+          <li><b>Forja</b><span>Junte materiais das batalhas e a Yelena forja armas, armaduras e acessórios para a sua Classe. Gemas Elementais influenciam o Elemento da peça.</span></li>
+          <li><b>Combinação</b><span>Junte peças do mesmo tipo e da mesma raridade e transforme-as numa peça da raridade seguinte.</span></li>
+          <li><b>Mercado</b><span>Venda e compre equipamentos de outros jogadores.</span></li>
+          <li><b>Farm Offline</b><span>Seu herói continua juntando recompensas enquanto você está fora.</span></li>
+          <li><b>Ranking</b><span>Dispute o maior Nível e a maior Mestria em cada Elemento.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="gameplay" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Gameplay</p>
+      <h2>Do Lobby ao Chefe</h2>
+      <p class="intro">A Maga escolhe o Modo História, o Elemento e as habilidades, e enfrenta a primeira jornada até o Chefe.</p>
+      <div class="video">
+        <video controls preload="none" playsinline poster="img/gameplay_poster.webp" width="1280" height="720">
+          <source src="img/gameplay.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-last">
+    <div class="wrap closing">
+      <img src="img/logo.webp" alt="" class="closing-logo" loading="lazy">
+      <h2>Em breve para Android</h2>
+      <p>Disponível em português e inglês. Dúvidas, sugestões ou problemas na conta:<br><a href="mailto:irontyro.games@gmail.com">irontyro.games@gmail.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© 2026 IronTyro</span>
+    <nav aria-label="Documentos">
+      <a href="../privacidade.html">Política de Privacidade</a>
+      <a href="../termos.html">Termos de Uso</a>
+      <a href="../excluir-conta.html">Excluir conta</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
