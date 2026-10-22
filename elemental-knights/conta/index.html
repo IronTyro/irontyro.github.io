@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Só o necessário: nossos arquivos, o login do Google, as fontes e a API do jogo. Nenhum script embutido. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client; frame-src https://accounts.google.com/gsi/; connect-src 'self' https://elementalknights-production.up.railway.app https://accounts.google.com/gsi/; style-src 'self' https://fonts.googleapis.com https://accounts.google.com/gsi/style; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.googleusercontent.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>Minha conta — Elemental Knights</title>
+<meta name="description" content="Entre com o Google e veja seu herói de Elemental Knights: Nível, Mestria e estatísticas.">
+<meta name="theme-color" content="#0b0812">
+<link rel="icon" type="image/png" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../ek.css?v=2">
+<link rel="stylesheet" href="conta.css?v=1">
+<script src="https://accounts.google.com/gsi/client" async></script>
+<script src="conta.js?v=1" defer></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="studio" href="../../">IronTyro</a>
+    <nav aria-label="Seções">
+      <a href="../">Elemental Knights</a>
+    </nav>
+  </div>
+</header>
+
+<main class="acct">
+  <div class="wrap">
+
+    <section id="signin" class="acct-card signin">
+      <img class="signin-logo" src="../img/logo.webp" alt="Elemental Knights" width="640" height="629">
+      <h1>Minha conta</h1>
+      <p class="muted">Entre com o Google para ver o seu herói: Nível, Mestria e estatísticas.</p>
+      <div id="gbtn" class="gbtn"></div>
+      <p id="signin-msg" class="msg" role="status"></p>
+      <details class="howto">
+        <summary>Primeira vez? Vincule o Google no jogo</summary>
+        <ol>
+          <li>Abra o Elemental Knights e entre na sua conta.</li>
+          <li>Toque na engrenagem (<b>Configurações</b>) → <b>Conta</b> → <b>Vincular Google</b>.</li>
+          <li>Confirme com a sua senha e escolha a conta Google.</li>
+          <li>Pronto: volte aqui e toque em <b>Entrar com Google</b>.</li>
+        </ol>
+        <p class="muted small">Quem criou a conta já pelo Google não precisa vincular. O site só mostra o seu perfil: não dá para gastar, vender nem mudar nada da conta por aqui.</p>
+      </details>
+    </section>
+
+    <section id="profile" class="profile" hidden>
+      <div class="acct-card hero-head">
+        <div class="bust"><img id="p-bust" src="" alt=""></div>
+        <div class="who">
+          <p class="eyebrow" id="p-class"></p>
+          <h1 id="p-name"></h1>
+          <p class="muted small" id="p-since"></p>
+          <div class="lvl">
+            <div class="lvl-top"><span class="lvl-n">Nível <b id="p-level"></b></span><span class="rank" id="p-rank"></span></div>
+            <div class="bar"><i id="p-xpbar"></i></div>
+            <p class="muted small" id="p-xp"></p>
+          </div>
+        </div>
+        <button id="logout" class="ghost" type="button">Sair</button>
+      </div>
+
+      <h2 class="sec">Mestria elemental</h2>
+      <div id="p-mastery" class="mastery"></div>
+
+      <h2 class="sec">Conquistas</h2>
+      <div id="p-stats" class="stats"></div>
+
+      <h2 class="sec">Equipamento</h2>
+      <div id="p-gear" class="gear"></div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span>© 2026 IronTyro</span>
+    <nav aria-label="Documentos">
+      <a href="../../privacidade.html">Política de Privacidade</a>
+      <a href="../../termos.html">Termos de Uso</a>
+      <a href="../../excluir-conta.html">Excluir conta</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
