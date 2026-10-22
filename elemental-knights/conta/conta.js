@@ -7,7 +7,7 @@
 
 // Client ID do cliente WEB no Google Cloud (público). Vazio = ainda não
 // configurado: a página avisa em vez de mostrar o botão.
-const GOOGLE_CLIENT_ID = "";
+const GOOGLE_CLIENT_ID = "1046669443617-dp79j8l4mn0dpdq82fjc59o7cac9l7j7.apps.googleusercontent.com";
 const API = "https://elementalknights-production.up.railway.app/web";
 
 const CLASSES = [
