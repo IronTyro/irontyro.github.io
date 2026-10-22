@@ -106,12 +106,24 @@ h3 { font: 700 20px/1.25 var(--display); margin: 0; }
   transition: transform .25s ease, border-color .25s ease;
 }
 .hero-card:hover { transform: translateY(-4px); border-color: var(--c); }
+/* bustos: sério parado; alegre no hover/toque/foco */
+.hero-card { overflow: hidden; }
 .hero-pic {
-  height: 230px; display: grid; place-items: end center; margin-bottom: 14px;
-  background: radial-gradient(circle at 50% 70%, color-mix(in srgb, var(--c) 40%, transparent), transparent 62%);
+  position: relative; aspect-ratio: 1; margin: -18px -18px 12px;
+  background: radial-gradient(circle at 50% 58%, color-mix(in srgb, var(--c) 45%, transparent), transparent 66%);
+  -webkit-mask-image: linear-gradient(#000 78%, #0000);
+          mask-image: linear-gradient(#000 78%, #0000);
 }
-.hero-pic img { max-height: 230px; width: auto; filter: drop-shadow(0 8px 14px #0009); }
+.hero-pic img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain;
+  transition: opacity .22s ease, transform .35s ease;
+}
+.hero-pic .alegre { opacity: 0; transform: scale(1.03); }
+.hero-card:hover .serio, .hero-card:focus-visible .serio, .hero-card:active .serio { opacity: 0; }
+.hero-card:hover .alegre, .hero-card:focus-visible .alegre, .hero-card:active .alegre { opacity: 1; transform: scale(1.06); }
+.hero-card:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px; }
 .hero-card .role { color: var(--c); font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin: 4px 0 8px; }
+@media (prefers-reduced-motion: reduce) { .hero-pic img { transition: none; } }
 .hero-card p { margin: 0; color: var(--muted); font-size: 15px; }
 
 /* --- elementos */
