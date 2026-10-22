@@ -174,7 +174,7 @@ h3 { font: 700 20px/1.25 var(--display); margin: 0; }
   border: 1px solid #d8a54b55;
 }
 .strategy h3 { color: var(--gold-hi); margin-bottom: 6px; }
-.strategy p { margin: 0; color: var(--ink); max-width: 80ch; }
+.strategy p { margin: 0; color: var(--ink); }
 .strategy b { color: var(--gold-hi); }
 
 /* --- modos */
