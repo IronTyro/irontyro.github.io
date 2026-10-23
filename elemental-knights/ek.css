@@ -38,7 +38,13 @@ a { color: var(--gold-hi); }
 .topbar nav { display: flex; gap: 18px; margin-left: auto; flex-wrap: wrap; }
 .topbar nav a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 500; opacity: .85; }
 .topbar nav a:hover, .topbar nav a:focus-visible { color: var(--gold-hi); opacity: 1; }
-@media (max-width: 640px) { .topbar nav { display: none; } }
+/* "Minha conta" fica sempre à vista (no celular, só ele) */
+.topbar nav a.nav-acct {
+  color: var(--gold-hi); opacity: 1; border: 1px solid #d8a54b88; border-radius: 999px;
+  padding: 6px 14px; background: #0b0812aa;
+}
+.topbar nav a.nav-acct:hover, .topbar nav a.nav-acct:focus-visible { border-color: var(--gold-hi); }
+@media (max-width: 640px) { .topbar nav a:not(.nav-acct) { display: none; } }
 
 /* --- herói */
 .hero { position: relative; min-height: min(92vh, 900px); display: grid; align-items: end; overflow: hidden; }
@@ -71,6 +77,12 @@ a { color: var(--gold-hi); }
   box-shadow: 0 0 0 3px #0b0812, 0 0 0 4px #d8a54b88, 0 8px 28px #d8a54b44;
 }
 .cta:hover, .cta:focus-visible { filter: brightness(1.08); }
+.cta-ghost {
+  font: 700 15px/1 var(--display); letter-spacing: .08em; text-transform: uppercase;
+  color: var(--gold-hi); text-decoration: none; border: 1px solid #d8a54baa; border-radius: 6px;
+  padding: 14px 22px; background: #0b0812aa;
+}
+.cta-ghost:hover, .cta-ghost:focus-visible { border-color: var(--gold-hi); background: #1a1328cc; }
 .soon {
   font-size: 14px; font-weight: 600; color: var(--gold-hi);
   border: 1px solid #d8a54b66; border-radius: 999px; padding: 9px 16px; background: #0b0812aa;
