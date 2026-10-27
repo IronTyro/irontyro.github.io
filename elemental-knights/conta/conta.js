@@ -50,6 +50,12 @@ function showMsg(text, bad) {
   m.classList.toggle("bad", !!bad);
 }
 
+// Rainha Elysiana (busto "serio" ou "alegre") com uma fala nova.
+function queenSay(mood, text) {
+  $("queen-img").src = `../img/busto_rainha_${mood}.webp`;
+  $("queen-say").textContent = text;
+}
+
 async function onGoogleCredential(resp) {
   showMsg("Entrando…");
   try {
@@ -61,7 +67,11 @@ async function onGoogleCredential(resp) {
     const data = await r.json().catch(() => ({}));
     if (!r.ok) {
       showMsg(data.error || "Não foi possível entrar agora.", true);
-      if (r.status === 404) document.querySelector(".howto").open = true;
+      if (r.status === 404) {
+        document.querySelector(".howto").open = true;
+        // conta Google sem conta no jogo: a Rainha fica séria e explica
+        queenSay("serio", "Hmm… não encontrei nenhum cavaleiro com essa conta Google. Crie a sua conta no jogo (ou vincule o Google em Configurações → Conta) e volte aqui.");
+      }
       return;
     }
     session = data.token;

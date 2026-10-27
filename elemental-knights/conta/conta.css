@@ -14,6 +14,31 @@
 .gbtn { display: flex; justify-content: center; min-height: 44px; margin: 22px 0 8px; }
 .msg { min-height: 1.4em; color: var(--gold-hi); font-weight: 600; margin: 8px 0 0; }
 .msg.bad { color: #ff8a7a; }
+/* Rainha Elysiana avisando que precisa de conta no jogo */
+.queen { display: flex; align-items: flex-end; gap: 4px; margin: 20px 0 4px; text-align: left; }
+.queen img {
+  width: 150px; height: auto; flex: none;
+  filter: drop-shadow(0 6px 14px #0009);
+  -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent);
+  mask-image: linear-gradient(180deg, #000 78%, transparent);
+}
+.speech {
+  position: relative; flex: 1; margin-bottom: 18px;
+  background: #120d1c; border: 1px solid #d8a54b66; border-radius: 14px; padding: 12px 14px;
+}
+.speech::before {
+  content: ""; position: absolute; left: -8px; bottom: 22px; width: 14px; height: 14px;
+  background: #120d1c; border-left: 1px solid #d8a54b66; border-bottom: 1px solid #d8a54b66; transform: rotate(45deg);
+}
+.speaker { display: block; font: 700 14px/1.2 var(--display); color: var(--gold-hi); margin-bottom: 4px; letter-spacing: .02em; }
+.speech p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ink); }
+.speech b { color: var(--gold-hi); }
+@media (max-width: 480px) {
+  .queen { flex-direction: column; align-items: center; }
+  .speech { margin-bottom: 0; }
+  .speech::before { left: 50%; top: -8px; bottom: auto; margin-left: -7px; transform: rotate(135deg); }
+}
+
 .howto { text-align: left; margin-top: 18px; border-top: 1px solid var(--rule); padding-top: 14px; }
 .howto summary { cursor: pointer; color: var(--gold-hi); font-weight: 600; }
 .howto ol { padding-left: 20px; color: var(--ink); }
