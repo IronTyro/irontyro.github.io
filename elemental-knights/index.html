@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elemental Knights</title>
-<meta name="description" content="Elemental Knights — RPG estratégico para Android. Escolha sua Classe, domine os seis Elementos e monte sua estratégia de habilidades. Um jogo da IronTyro.">
+<meta name="description" content="Elemental Knights — RPG estratégico para Android. Escolha sua Classe, domine os seis Elementos, explore os reinos de Entherya e descubra cada criatura do Bestiário. Um jogo da IronTyro.">
 <meta property="og:title" content="Elemental Knights">
-<meta property="og:description" content="Escolha sua Classe, domine os seis Elementos e monte sua estratégia. Um jogo da IronTyro.">
+<meta property="og:description" content="Escolha sua Classe, domine os seis Elementos e explore os reinos de Entherya. Um jogo da IronTyro.">
 <meta property="og:image" content="https://irontyro.github.io/elemental-knights/img/keyart.webp">
 <meta name="theme-color" content="#0b0812">
 <link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="ek.css?v=4">
+<link rel="stylesheet" href="ek.css?v=5">
 </head>
 <body>
 
@@ -23,7 +23,9 @@
     <nav aria-label="Seções">
       <a href="#classes">Classes</a>
       <a href="#elementos">Elementos</a>
+      <a href="#mundo">Mundo</a>
       <a href="#modos">Modos</a>
+      <a href="#bestiario">Bestiário</a>
       <a href="#forja">Forja</a>
       <a href="#gameplay">Gameplay</a>
       <a class="nav-acct" href="conta/">Minha conta</a>
@@ -38,14 +40,48 @@
     <img class="logo" src="img/logo.webp" width="640" height="629" alt="Elemental Knights">
     <p class="tagline">Escolha sua Classe. Domine os seis Elementos.<br>Monte a estratégia que vence cada batalha.</p>
     <div class="cta-row">
-      <a class="cta" href="#gameplay">Ver o jogo em ação</a>
-      <a class="cta-ghost" href="conta/">Minha conta</a>
+      <a class="cta" href="#novidades">Veja as novidades</a>
+      <a class="cta-ghost" href="#gameplay">O jogo em ação</a>
       <span class="soon">Em breve para Android</span>
     </div>
   </div>
 </section>
 
 <main>
+
+  <section id="novidades" class="band band-news">
+    <div class="wrap">
+      <p class="eyebrow">O que há de novo</p>
+      <h2>Entherya cresceu</h2>
+      <p class="intro">Um novo Capítulo, um novo reino, o Grimório renovado e muito mais para fazer entre uma batalha e outra.</p>
+      <div class="news">
+        <a class="news-card" href="#capitulo3">
+          <img src="img/mapa_minametalmagnetizado.webp" alt="" loading="lazy">
+          <span class="tag">Novo capítulo</span>
+          <h3>A Mina de Metal Magnetizado</h3>
+          <p>O Capítulo 3 leva os heróis ao subsolo, onde as pedras flutuam e o Guardião do Núcleo desperta.</p>
+        </a>
+        <a class="news-card" href="#bestiario">
+          <img src="img/tela_best_grimorio.webp" alt="" loading="lazy">
+          <span class="tag">Grimório</span>
+          <h3>Bestiário de descobertas</h3>
+          <p>61 criaturas, cada uma com sua história. As que você nunca enfrentou aparecem só como sombra.</p>
+        </a>
+        <a class="news-card" href="#forja">
+          <img src="img/tela_elix_forja.webp" alt="" loading="lazy">
+          <span class="tag">Caldeirão</span>
+          <h3>Elixires de Maestria</h3>
+          <p>Prepare Elixires com Gemas Elementais e Água Purificada para fortalecer sua Maestria.</p>
+        </a>
+        <a class="news-card" href="#modos">
+          <img src="img/tela_dungeon_board.webp" alt="" loading="lazy">
+          <span class="tag">Novo modo</span>
+          <h3>Dungeon</h3>
+          <p>Um tabuleiro de 60 casas: jogue os dados, colete buffs, desvie das armadilhas e vença os Chefes.</p>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <section id="classes" class="band">
     <div class="wrap">
@@ -119,24 +155,57 @@
         </ul>
       </div>
 
+      <div class="matchup">
+        <div class="mu mu-up"><img src="img/icone_ui_vantagem.webp" alt=""><p><b>Com vantagem</b>Seus golpes causam <strong>+50%</strong> de dano.</p></div>
+        <div class="mu mu-down"><img src="img/icone_ui_desvantagem.webp" alt=""><p><b>Com desvantagem</b>Seus golpes causam <strong>−50%</strong> de dano.</p></div>
+      </div>
+
       <div class="strategy">
         <h3>Sua estratégia elemental</h3>
-        <p>Para cada Elemento, escolha <b>2 Passivas</b> e <b>3 Ativas</b>, incluindo Ultimates. Em batalha, o combate corre em tempo real e você decide a hora de cada habilidade. Lutar com um Elemento também aumenta a sua <b>Mestria</b> nele.</p>
+        <p>Para cada Elemento, escolha <b>2 Passivas</b> e <b>3 Ativas</b>, incluindo Ultimates. Em batalha, o combate corre em tempo real e você decide a hora de cada habilidade. Lutar com um Elemento também aumenta a sua <b>Maestria</b> nele.</p>
       </div>
     </div>
   </section>
 
-  <section id="modos" class="band">
+  <section id="mundo" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Os reinos de Entherya</p>
+      <h2>Cada terreno muda a luta</h2>
+      <p class="intro">Todo mapa favorece dois Elementos: quem luta com eles causa <b>+10% de dano</b> e tem <b>+2% de chance</b> de aplicar o efeito especial. Antes de entrar, o jogo mostra os dois Elementos do terreno e os do inimigo.</p>
+      <div class="realms">
+        <article class="realm"><img src="img/mapa_arredoresreino.webp" alt="Arredores do Reino" loading="lazy"><div class="realm-body"><h3>Arredores do Reino</h3><p class="pair"><img src="img/gema_terra.webp" alt="">Terra <img src="img/gema_natureza.webp" alt="">Natureza</p></div></article>
+        <article class="realm"><img src="img/mapa_florestadensa.webp" alt="Floresta Densa" loading="lazy"><div class="realm-body"><h3>Floresta Densa</h3><p class="pair"><img src="img/gema_natureza.webp" alt="">Natureza <img src="img/gema_agua.webp" alt="">Água</p></div></article>
+        <article class="realm"><img src="img/mapa_ruinasdeserto.webp" alt="Ruínas no Deserto" loading="lazy"><div class="realm-body"><h3>Ruínas no Deserto</h3><p class="pair"><img src="img/gema_terra.webp" alt="">Terra <img src="img/gema_fogo.webp" alt="">Fogo</p></div></article>
+        <article class="realm"><img src="img/mapa_praialeste.webp" alt="Praia Leste" loading="lazy"><div class="realm-body"><h3>Praia Leste</h3><p class="pair"><img src="img/gema_agua.webp" alt="">Água <img src="img/gema_fogo.webp" alt="">Fogo</p></div></article>
+        <article class="realm"><img src="img/mapa_florestapinheirosnaneve.webp" alt="Floresta de Pinheiros na Neve" loading="lazy"><div class="realm-body"><h3>Pinheiros na Neve</h3><p class="pair"><img src="img/gema_gelo.webp" alt="">Gelo <img src="img/gema_terra.webp" alt="">Terra</p></div></article>
+        <article class="realm"><img src="img/mapa_fabricaabandonada.webp" alt="Fábrica Abandonada" loading="lazy"><div class="realm-body"><h3>Fábrica Abandonada</h3><p class="pair"><img src="img/gema_raio.webp" alt="">Raio <img src="img/gema_fogo.webp" alt="">Fogo</p></div></article>
+        <article class="realm realm-new"><img src="img/mapa_minametalmagnetizado.webp" alt="Mina de Metal Magnetizado" loading="lazy"><div class="realm-body"><span class="tag">Novo</span><h3>Mina de Metal Magnetizado</h3><p class="pair"><img src="img/gema_terra.webp" alt="">Terra <img src="img/gema_raio.webp" alt="">Raio</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="modos" class="band band-modes">
     <div class="wrap">
       <p class="eyebrow">Para onde ir</p>
       <h2>Modos de jogo</h2>
+
+      <div id="capitulo3" class="chapter">
+        <img src="img/tela_lineup.webp" alt="Batalha na Mina de Metal Magnetizado contra o Urso das Montanhas, o Lince Tempestuoso e o Cão de Magma" loading="lazy">
+        <div class="chapter-text">
+          <span class="tag">Modo História · Capítulo 3</span>
+          <h3>A Mina de Metal Magnetizado</h3>
+          <p>Os tremores vêm de uma mina abandonada, onde o metal magnetizado faz as pedras flutuarem. Raios, magma e uma tempestade magnética separam os heróis do Guardião do Núcleo Terrestre, corrompido pela energia da Arca Primordial.</p>
+          <p class="gain">5 etapas, muitas falas novas dos heróis e um desafio de verdade no fim.</p>
+        </div>
+      </div>
+
       <div class="modes">
         <article class="mode">
           <img src="img/modo_historia.webp" alt="Modo História" loading="lazy">
           <div class="mode-body">
             <h3>Modo História</h3>
-            <p>Acompanhe a história de Elemental Knights, uma jornada depois da outra. Cada jornada é uma sequência de lutas, e concluir uma libera a próxima.</p>
-            <p class="gain">Prêmio especial na primeira vez que conclui cada jornada.</p>
+            <p>Três Capítulos com cinco etapas cada, dos Arredores do Reino até o fundo da Mina. Cada etapa é uma sequência de lutas que termina num Chefe, com falas de cada herói pelo caminho.</p>
+            <p class="gain">Prêmio especial na primeira vez que conclui cada etapa.</p>
           </div>
         </article>
         <article class="mode">
@@ -155,6 +224,42 @@
             <p class="gain">Os andares mais altos dão os equipamentos mais raros.</p>
           </div>
         </article>
+        <article class="mode">
+          <img src="img/tela_dungeon_board.webp" alt="Tabuleiro da Dungeon" loading="lazy">
+          <div class="mode-body">
+            <h3>Dungeon <span class="tag tag-inline">Novo</span></h3>
+            <p>Um tabuleiro de 60 casas. Jogue os dados todo dia e avance: há casas de buff, armadilhas, prêmios e dados extras, e a cada trecho um Chefe barra o caminho. O tabuleiro recomeça toda semana.</p>
+            <p class="gain">Os buffs que você junta valem até o fim do tabuleiro.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="bestiario" class="band band-bestiary">
+    <div class="wrap">
+      <p class="eyebrow">Grimório</p>
+      <h2>Bestiário de Entherya</h2>
+      <div class="bestiary">
+        <div class="bestiary-text">
+          <p class="intro">São <b>61 criaturas</b>, e cada uma tem sua própria história. No Grimório, os monstros que você ainda não enfrentou aparecem só como sombra, sem nome nem recompensa. Para preencher o Bestiário, só lutando.</p>
+          <p class="hint">Toque numa sombra abaixo para revelá-la.</p>
+        </div>
+        <img class="bestiary-shot" src="img/tela_best_grimorio.webp" alt="Bestiário no Grimório, com metade das criaturas descobertas e o resto em silhueta" loading="lazy">
+      </div>
+      <div class="beasts">
+        <button class="beast" type="button" style="--e:#c08a4a"><img src="img/monstro_ursomontanha.webp" alt=""><span class="b-name">Urso das Montanhas</span><span class="b-lore">Hiberna dentro das montanhas por tanto tempo que a rocha cresce em seu dorso. Quando acorda com fome, desce as encostas como uma avalanche.</span></button>
+        <button class="beast" type="button" style="--e:#f0c93d"><img src="img/monstro_lincetempestuoso.webp" alt=""><span class="b-name">Lince Tempestuoso</span><span class="b-lore">Rápido como um relâmpago e igualmente imprevisível. Poucos conseguem vê-lo antes do primeiro choque.</span></button>
+        <button class="beast" type="button" style="--e:#ff6a3d"><img src="img/monstro_caomagma.webp" alt=""><span class="b-name">Cão de Magma</span><span class="b-lore">Ronda as bordas dos vulcões farejando calor. Dentro de sua boca arde uma pequena fornalha.</span></button>
+        <button class="beast" type="button" style="--e:#8fd9e8"><img src="img/monstro_baleiaglacial.webp" alt=""><span class="b-name">Baleia Glacial</span><span class="b-lore">Nada entre os mares congelados do norte. Os pescadores contam que, quando ela aparece, o inverno chega mais cedo.</span></button>
+        <button class="beast" type="button" style="--e:#6fbf55"><img src="img/monstro_entancestral.webp" alt=""><span class="b-name">Ent Ancestral</span><span class="b-lore">Um dos guardiões mais antigos das florestas de Entherya. Pensa por estações inteiras, mas, quando desperta, a mata toda responde.</span></button>
+        <button class="beast" type="button" style="--e:#4aa3cf"><img src="img/monstro_tubarao.webp" alt=""><span class="b-name">Tubarão Rei</span><span class="b-lore">O senhor das águas rasas da Praia Leste. Patrulha a costa e não tolera intrusos em seu território.</span></button>
+        <button class="beast" type="button" style="--e:#4aa3cf"><img src="img/monstro_serpentecachoeira.webp" alt=""><span class="b-name">Serpente da Cachoeira</span><span class="b-lore">Vive escondida atrás das quedas d'água. Quem mora na beira do rio deixa oferendas para que ela não suba a correnteza.</span></button>
+        <button class="beast" type="button" style="--e:#8fd9e8"><img src="img/monstro_lobogeada.webp" alt=""><span class="b-name">Lobo da Geada</span><span class="b-lore">Caça em matilha nas noites mais frias, guiado pelo brilho azul dos próprios olhos.</span></button>
+        <button class="beast" type="button" style="--e:#6fbf55"><img src="img/monstro_unicornio.webp" alt=""><span class="b-name">Unicórnio da Floresta</span><span class="b-lore">Raro e orgulhoso, só se mostra nas matas mais preservadas. A energia sombria o deixou desconfiado de qualquer forasteiro.</span></button>
+        <button class="beast" type="button" style="--e:#ff6a3d"><img src="img/monstro_elementalfogo.webp" alt=""><span class="b-name">Elemental de Fogo</span><span class="b-lore">Dizem que, quando os Elementais de Fogo aparecem, o mundo está à beira de uma grande mudança.</span></button>
+        <button class="beast" type="button" style="--e:#8fd9e8"><img src="img/monstro_garguladegelo.webp" alt=""><span class="b-name">Gárgula de Gelo</span><span class="b-lore">Dorme imóvel no alto das ruínas, confundida com uma estátua congelada, até o frio aumentar.</span></button>
+        <button class="beast beast-boss" type="button" style="--e:#c08a4a"><img src="img/monstro_guardiaonucleoterrestre.webp" alt=""><span class="b-name">Guardião do Núcleo Terrestre</span><span class="b-lore">Um colosso nascido no coração das montanhas. Com o equilíbrio rompido, subiu à superfície pela primeira vez em séculos.</span></button>
       </div>
     </div>
   </section>
@@ -172,14 +277,31 @@
       </div>
       <div class="forge-text">
         <p class="eyebrow">Yelena, a ferreira</p>
-        <h2>Forje o seu arsenal</h2>
+        <h2>Forja &amp; Caldeirão</h2>
         <ul class="feats">
-          <li><b>Forja</b><span>Junte materiais das batalhas e a Yelena forja armas, armaduras e acessórios para a sua Classe. Gemas Elementais influenciam o Elemento da peça.</span></li>
-          <li><b>Combinação</b><span>Junte peças do mesmo tipo e da mesma raridade e transforme-as numa peça da raridade seguinte.</span></li>
-          <li><b>Mercado</b><span>Venda e compre equipamentos de outros jogadores.</span></li>
-          <li><b>Farm Offline</b><span>Seu herói continua juntando recompensas enquanto você está fora.</span></li>
-          <li><b>Ranking</b><span>Dispute o maior Nível e a maior Mestria em cada Elemento.</span></li>
+          <li><b>Forja</b><span>Junte materiais das batalhas e a Yelena forja armas, armaduras e acessórios para todas as Classes. Gemas Elementais influenciam o Elemento da peça.</span></li>
+          <li><b>Peças com personalidade</b><span>Além do atributo principal, toda peça traz um atributo secundário. As peças com Elemento ganham ainda um Poder Elemental: mais dano daquele Elemento ou mais chance do seu efeito especial.</span></li>
+          <li><b>Oito raridades</b><span>De Básico a Mítico. Cada raridade pede um Nível mínimo do herói para vestir, então o arsenal cresce junto com você.</span></li>
+          <li><b>Combinação</b><span>Junte peças da mesma raridade e transforme-as numa peça da raridade seguinte.</span></li>
+          <li><b>Caldeirão</b><span>Prepare Elixires de Maestria Pequenos, Médios e Grandes com Gemas Elementais, Água Purificada e materiais das batalhas.</span></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="mais" class="band">
+    <div class="wrap">
+      <p class="eyebrow">Entre uma batalha e outra</p>
+      <h2>Muito mais para fazer</h2>
+      <div class="extras">
+        <div class="extra"><img src="img/icone_mod_conquistas.webp" alt=""><h3>Missões e Conquistas</h3><p>Missões novas todo dia e Conquistas para guardar de lembrança.</p></div>
+        <div class="extra"><img src="img/icone_mod_login.webp" alt=""><h3>Baú do dia</h3><p>Junte as chaves das missões diárias e abra o Baú.</p></div>
+        <div class="extra"><img src="img/icone_mod_loja.webp" alt=""><h3>Mercado</h3><p>Venda e compre equipamentos de outros jogadores com Prata.</p></div>
+        <div class="extra"><img src="img/icone_mod_calendario.webp" alt=""><h3>Farm Offline</h3><p>Seu herói continua juntando recompensas enquanto você está fora.</p></div>
+        <div class="extra"><img src="img/icone_mod_missoes.webp" alt=""><h3>Ranking</h3><p>Dispute o maior Nível e a maior Maestria em cada Elemento.</p></div>
+        <div class="extra"><img src="img/icone_mod_correio.webp" alt=""><h3>Correio</h3><p>Prêmios, avisos e as novidades de cada atualização chegam aqui.</p></div>
+        <div class="extra"><img src="img/icone_mod_perfil.webp" alt=""><h3>Conta Google</h3><p>Entre com o Google e seu progresso fica salvo, em qualquer aparelho.</p></div>
+        <div class="extra"><img src="img/icone_mod_grimorio.webp" alt=""><h3>Português e inglês</h3><p>Jogue no idioma que preferir e troque quando quiser nas Configurações.</p></div>
       </div>
     </div>
   </section>
@@ -201,7 +323,7 @@
     <div class="wrap closing">
       <img src="img/logo.webp" alt="" class="closing-logo" loading="lazy">
       <h2>Em breve para Android</h2>
-      <p>Disponível em português e inglês. Dúvidas, sugestões ou problemas na conta:<br><a href="mailto:irontyro.games@gmail.com">irontyro.games@gmail.com</a></p>
+      <p>Disponível em português e inglês. Siga <a href="https://www.instagram.com/elementalknights/">@elementalknights</a> no Instagram para acompanhar as novidades.<br>Dúvidas, sugestões ou problemas na conta: <a href="mailto:irontyro.games@gmail.com">irontyro.games@gmail.com</a></p>
     </div>
   </section>
 
@@ -211,6 +333,7 @@
   <div class="wrap foot-in">
     <span>© 2026 IronTyro</span>
     <nav aria-label="Documentos">
+      <a href="https://www.instagram.com/elementalknights/">Instagram</a>
       <a href="../privacidade.html">Política de Privacidade</a>
       <a href="../termos.html">Termos de Uso</a>
       <a href="../excluir-conta.html">Excluir conta</a>
@@ -218,5 +341,15 @@
   </div>
 </footer>
 
+<script>
+  // Bestiário: cada sombra se revela ao ser tocada (e fica revelada)
+  document.querySelectorAll('.beast').forEach(function (b) {
+    b.setAttribute('aria-label', 'Criatura desconhecida, toque para revelar');
+    b.addEventListener('click', function () {
+      b.classList.add('seen');
+      b.setAttribute('aria-label', b.querySelector('.b-name').textContent);
+    });
+  });
+</script>
 </body>
 </html>
