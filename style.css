@@ -1,53 +1,156 @@
-:root {
-  --ground: #f6f3ee;
-  --surface: #ffffff;
-  --ink: #221c14;
-  --muted: #6b6255;
-  --gold: #9a6b1f;
-  --rule: #e2d9c9;
+/* IronTyro Studio — tema "forja": ferro escuro, cobre e brasa (cores do logo) */
+@font-face {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("fonts/cinzel-latin.woff2") format("woff2");
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ground: #110d17;
-    --surface: #1a1422;
-    --ink: #eee6d8;
-    --muted: #a99f8f;
-    --gold: #d8a54b;
-    --rule: #33293f;
-  }
+:root {
+  --ground: #0d0907;
+  --surface: #1a120d;
+  --surface-2: #22170f;
+  --ink: #f1e6d6;
+  --muted: #b8a68f;
+  --copper: #c9773a;
+  --bronze: #e3a868;
+  --ember: #ff8c1a;
+  --flame: #ffc657;
+  --link: #f2a95a;
+  --rule: #3b2a1d;
+  --rule-hot: #8a4a1f;
+  --display: "Cinzel", "Trajan Pro", Georgia, serif;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; }
+html { background: var(--ground); }
 body {
   margin: 0;
-  background: var(--ground);
+  min-height: 100vh;
   color: var(--ink);
-  font: 16px/1.65 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  font: 16px/1.7 "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  background:
+    radial-gradient(ellipse 90% 520px at 50% -120px, #ff7a1a2e, transparent 70%),
+    radial-gradient(ellipse 60% 400px at 50% 110%, #ff5a0a14, transparent 70%),
+    repeating-linear-gradient(115deg, #ffffff03 0 2px, transparent 2px 7px),
+    var(--ground);
 }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+
+/* ---------- topo ---------- */
 header {
-  border-bottom: 1px solid var(--rule);
-  background: var(--surface);
+  position: relative;
+  background: linear-gradient(#1d140e, #140e0a);
+  box-shadow: 0 1px 0 #000, 0 8px 24px #0008;
 }
-header .wrap { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; }
-.brand { font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
-nav { display: flex; gap: 16px; flex-wrap: wrap; }
-nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
-nav a:hover, nav a:focus-visible { color: var(--gold); }
-.wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
-main { padding: 32px 0 56px; }
-h1 { font-size: 30px; line-height: 1.25; margin: 0 0 6px; text-wrap: balance; }
-h2 { font-size: 19px; margin: 32px 0 8px; color: var(--gold); }
-.lede { color: var(--muted); margin: 0 0 24px; }
-.card { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 18px 20px; margin: 16px 0; }
-ul { padding-left: 20px; }
-li { margin: 4px 0; }
-a { color: var(--gold); }
-footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px; padding: 20px 0 32px; }
-/* destaque do jogo na página inicial (arte do jogo: sempre escuro) */
+header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--rule-hot) 15%, var(--ember) 50%, var(--rule-hot) 85%, transparent);
+  opacity: .85;
+}
+header .wrap { display: flex; align-items: center; gap: 10px 20px; flex-wrap: wrap; padding-top: 10px; padding-bottom: 10px; }
+.brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--display); font-weight: 800; font-size: 20px; letter-spacing: .06em;
+  color: var(--bronze); text-decoration: none;
+}
+.brand img { width: 46px; height: 46px; filter: drop-shadow(0 0 8px #ff7a1a55); }
+nav { display: flex; gap: 6px 18px; flex-wrap: wrap; margin-left: auto; }
+nav a { color: var(--muted); text-decoration: none; font-size: 14px; padding: 4px 0; border-bottom: 2px solid transparent; }
+nav a:hover, nav a:focus-visible { color: var(--flame); border-bottom-color: var(--ember); }
+nav a[aria-current="page"] { color: var(--bronze); border-bottom-color: var(--copper); }
+
+/* ---------- texto ---------- */
+main { padding: 36px 0 64px; }
+h1 {
+  font-family: var(--display); font-weight: 800;
+  font-size: clamp(26px, 5vw, 36px); line-height: 1.2; letter-spacing: .02em;
+  margin: 0 0 8px; text-wrap: balance;
+  background: linear-gradient(180deg, #fbeedd 0%, #e9b98a 45%, #b5652f 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 2px 0 #000a);
+}
+h2 {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--display); font-weight: 700; font-size: 20px; letter-spacing: .04em;
+  margin: 40px 0 10px; color: var(--bronze);
+}
+/* losango em brasa, como as pontas da moldura do logo */
+h2::before {
+  content: ""; flex: none; width: 10px; height: 10px; transform: rotate(45deg);
+  background: linear-gradient(135deg, var(--flame), var(--copper));
+  box-shadow: 0 0 10px #ff8c1a99;
+}
+.lede { color: var(--muted); margin: 0 0 28px; }
+a { color: var(--link); text-underline-offset: 3px; }
+a:hover { color: var(--flame); }
+strong { color: #fff3e2; }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+li::marker { color: var(--copper); }
+code { background: var(--surface-2); border: 1px solid var(--rule); padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+
+/* placa de ferro com rebites nos cantos */
+.card {
+  position: relative;
+  background:
+    radial-gradient(circle at 10px 10px, #d9925a 0 2px, #5a3820 2.5px, transparent 3.5px),
+    radial-gradient(circle at calc(100% - 10px) 10px, #d9925a 0 2px, #5a3820 2.5px, transparent 3.5px),
+    radial-gradient(circle at 10px calc(100% - 10px), #d9925a 0 2px, #5a3820 2.5px, transparent 3.5px),
+    radial-gradient(circle at calc(100% - 10px) calc(100% - 10px), #d9925a 0 2px, #5a3820 2.5px, transparent 3.5px),
+    linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--rule-hot);
+  border-radius: 8px;
+  box-shadow: inset 0 1px 0 #ffffff0d, 0 6px 18px #0007;
+  padding: 20px 24px;
+  margin: 16px 0;
+}
+
+/* ---------- capa (página inicial) ---------- */
+.hero { position: relative; text-align: center; padding: 8px 0 12px; }
+.hero-logo-wrap { position: relative; display: inline-block; }
+.hero-logo-wrap::before {
+  content: ""; position: absolute; inset: 12%; border-radius: 50%;
+  background: radial-gradient(circle, #ff8c1a66, #ff5a0a22 45%, transparent 70%);
+  filter: blur(18px); animation: forja 3.2s ease-in-out infinite;
+}
+.hero-logo { position: relative; width: min(360px, 78vw); height: auto; display: block; filter: drop-shadow(0 12px 28px #000c); }
+.hero h1 { margin-top: 10px; }
+.hero .lede { margin: 0 auto 8px; max-width: 46ch; font-size: 17px; }
+@keyframes forja { 0%, 100% { opacity: .75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+
+/* faíscas subindo */
+.sparks { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.sparks i {
+  position: absolute; bottom: 30%; width: 3px; height: 3px; border-radius: 50%;
+  background: var(--flame); box-shadow: 0 0 6px 1px var(--ember);
+  opacity: 0; animation: faisca 3.6s linear infinite;
+}
+.sparks i:nth-child(1) { left: 34%; animation-delay: 0s; }
+.sparks i:nth-child(2) { left: 46%; animation-delay: .9s; animation-duration: 4.2s; }
+.sparks i:nth-child(3) { left: 58%; animation-delay: 1.7s; }
+.sparks i:nth-child(4) { left: 64%; animation-delay: 2.6s; animation-duration: 3.1s; }
+.sparks i:nth-child(5) { left: 40%; animation-delay: 3.1s; animation-duration: 4.6s; }
+.sparks i:nth-child(6) { left: 52%; animation-delay: 2.2s; animation-duration: 3.4s; }
+@keyframes faisca {
+  0% { opacity: 0; transform: translate(0, 0); }
+  12% { opacity: 1; }
+  100% { opacity: 0; transform: translate(18px, -220px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-wrap::before, .sparks i { animation: none; }
+  .sparks { display: none; }
+}
+
+/* destaque do jogo */
 .feature {
   position: relative; display: block; overflow: hidden; margin: 16px 0 8px;
-  border-radius: 12px; border: 1px solid #d8a54b66; background: #0b0812;
+  border-radius: 10px; border: 1px solid var(--rule-hot); background: #0b0812;
+  box-shadow: 0 10px 30px #000a, 0 0 0 1px #000;
   color: #f3ead4; text-decoration: none; min-height: 300px;
+  transition: border-color .25s, box-shadow .25s;
 }
+.feature:hover, .feature:focus-visible { border-color: var(--ember); box-shadow: 0 10px 30px #000a, 0 0 22px #ff8c1a44; }
 .feature-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; opacity: .55; transition: transform .4s ease; }
 .feature:hover .feature-art, .feature:focus-visible .feature-art { transform: scale(1.04); }
 .feature-body {
@@ -57,5 +160,24 @@ footer { border-top: 1px solid var(--rule); color: var(--muted); font-size: 13px
 }
 .feature-logo { width: 150px; height: auto; filter: drop-shadow(0 6px 16px #000c); }
 .feature-text { max-width: 52ch; font-size: 15px; line-height: 1.55; }
-.feature-cta { font-weight: 700; color: #f3d27a; letter-spacing: .02em; }
-code { background: var(--rule); padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+.feature-cta {
+  font-family: var(--display); font-weight: 700; letter-spacing: .04em;
+  color: #1a0f06; background: linear-gradient(180deg, var(--flame), var(--ember) 60%, #c4560c);
+  padding: 6px 14px; border-radius: 6px; box-shadow: 0 2px 0 #6b2d06, 0 0 14px #ff8c1a55;
+}
+
+/* ---------- rodapé ---------- */
+footer { position: relative; color: var(--muted); font-size: 13px; padding: 22px 0 36px; background: #0a0705; }
+footer::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule-hot), transparent);
+}
+footer .wrap { display: flex; align-items: center; gap: 10px; }
+footer img { width: 28px; height: 28px; opacity: .85; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 560px) {
+  nav { margin-left: 0; width: 100%; }
+  .card { padding: 18px 18px; }
+}

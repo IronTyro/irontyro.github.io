@@ -3,26 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IronTyro</title>
-<meta name="description" content="IronTyro — estúdio independente, criador de Elemental Knights.">
-<link rel="stylesheet" href="style.css?v=2">
+<title>IronTyro Studio</title>
+<meta name="description" content="IronTyro Studio — estúdio independente de jogos, criador de Elemental Knights.">
+<meta name="theme-color" content="#0d0907">
+<meta property="og:title" content="IronTyro Studio">
+<meta property="og:description" content="Estúdio independente de jogos, criador de Elemental Knights.">
+<meta property="og:image" content="https://irontyro.github.io/img/irontyro-logo.webp">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/cinzel-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <header><div class="wrap">
-  <a class="brand" href="./">IronTyro</a>
-  <nav>
-    <a href="elemental-knights/">Elemental Knights</a>
-    <a href="elemental-knights/conta/">Minha conta</a>
-    <a href="privacidade.html">Política de Privacidade</a>
+  <a class="brand" href="./" aria-current="page"><img src="img/irontyro-logo-sm.webp" alt="" width="46" height="46">IronTyro</a>
+  <nav aria-label="Principal">
+    <a href="https://elementalknights.com.br/">Elemental Knights</a>
+    <a href="https://elementalknights.com.br/conta/">Minha conta</a>
+    <a href="privacidade.html">Privacidade</a>
     <a href="termos.html">Termos de Uso</a>
     <a href="excluir-conta.html">Excluir conta</a>
   </nav>
 </div></header>
 <main><div class="wrap">
-  <h1>IronTyro</h1>
-  <p class="lede">Estúdio independente de jogos.</p>
+  <section class="hero">
+    <div class="sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="hero-logo-wrap">
+      <img class="hero-logo" src="img/irontyro-logo.webp" alt="IronTyro Studio" width="720" height="720">
+    </div>
+    <h1 class="sr-only">IronTyro Studio</h1>
+    <p class="lede">Estúdio independente de jogos.</p>
+  </section>
 
-  <a class="feature" href="elemental-knights/">
+  <h2>Nossos jogos</h2>
+  <a class="feature" href="https://elementalknights.com.br/">
     <img class="feature-art" src="elemental-knights/img/keyart.webp" alt="" width="1920" height="1080">
     <span class="feature-body">
       <img class="feature-logo" src="elemental-knights/img/logo.webp" alt="Elemental Knights" width="640" height="629">
@@ -32,7 +46,9 @@
   </a>
 
   <h2>Suporte</h2>
-  <p>Dúvidas, problemas na conta ou sugestões: <a href="mailto:irontyro.games@gmail.com">irontyro.games@gmail.com</a>.</p>
+  <div class="card">
+    <p style="margin:0">Dúvidas, problemas na conta ou sugestões: <a href="mailto:irontyro.games@gmail.com">irontyro.games@gmail.com</a>.</p>
+  </div>
 
   <h2>Documentos</h2>
   <ul>
@@ -41,6 +57,6 @@
     <li><a href="excluir-conta.html">Como excluir sua conta e seus dados</a></li>
   </ul>
 </div></main>
-<footer><div class="wrap">© 2026 IronTyro</div></footer>
+<footer><div class="wrap"><img src="img/irontyro-logo-sm.webp" alt="" width="28" height="28">© 2026 IronTyro Studio</div></footer>
 </body>
 </html>
