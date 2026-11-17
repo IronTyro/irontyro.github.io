@@ -27,8 +27,8 @@ const ELEMENTS = {
 const ELEMENT_BY_INDEX = ["FIRE", "WATER", "EARTH", "ICE", "LIGHTNING", "NATURE"];
 const SLOTS = ["Arma", "Capacete", "Peitoral", "Calças", "Bracelete", "Botas", "Colar", "Capa"];
 const RARITIES = [
-  { name: "Básico", color: "#f3f5fb" }, { name: "Comum", color: "#9aa3ae" },
-  { name: "Incomum", color: "#5bf07c" }, { name: "Raro", color: "#c68cff" },
+  { name: "Básico", color: "#f3f5fb" }, { name: "Comum", color: "#3fd8f0" },
+  { name: "Incomum", color: "#5bf07c" }, { name: "Raro", color: "#ff6ec7" },
   { name: "Heroico", color: "#8a2be2" }, { name: "Épico", color: "#2f8bff" },
   { name: "Lendário", color: "#ffc23d" }, { name: "Mítico", color: "#ff3b3b" },
 ];
