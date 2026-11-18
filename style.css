@@ -181,3 +181,9 @@ footer img { width: 28px; height: 28px; opacity: .85; }
   nav { margin-left: 0; width: 100%; }
   .card { padding: 18px 18px; }
 }
+
+/* Iron Kart Racing: cartão com as cores do jogo (neon roxo e dourado) */
+.feature + .feature { margin-top: 18px; }
+.feature-kart { border-color: #6a43b8; }
+.feature-kart:hover, .feature-kart:focus-visible { border-color: #f2c14e; box-shadow: 0 10px 30px #000a, 0 0 26px #b44dff66; }
+.feature-kart .feature-logo { width: 190px; }
